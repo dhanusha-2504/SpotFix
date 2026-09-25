@@ -10,6 +10,11 @@ try {
 
 const connectDB = async () => {
   try {
+    if (!process.env.MONGO_URI) {
+      console.error('[SPOTFIX Database Error] MONGO_URI environment variable is missing! Please set MONGO_URI in your Render Environment Variables dashboard.');
+      process.exit(1);
+    }
+
     const conn = await mongoose.connect(process.env.MONGO_URI, {
       serverSelectionTimeoutMS: 10000,
     });
