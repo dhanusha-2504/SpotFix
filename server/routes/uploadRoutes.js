@@ -17,7 +17,9 @@ router.post('/', protect, upload.single('image'), (req, res) => {
   }
 
   // Construct absolute/relative URL
-  const serverUrl = `${req.protocol}://${req.get('host')}`;
+  const protocol = req.headers['x-forwarded-proto'] || req.protocol || 'https';
+  const host = req.get('host');
+  const serverUrl = `${protocol}://${host}`;
   const fileUrl = `${serverUrl}/uploads/${req.file.filename}`;
 
   res.status(200).json({
@@ -45,7 +47,9 @@ router.post('/multiple', protect, upload.array('images', 5), (req, res) => {
     });
   }
 
-  const serverUrl = `${req.protocol}://${req.get('host')}`;
+  const protocol = req.headers['x-forwarded-proto'] || req.protocol || 'https';
+  const host = req.get('host');
+  const serverUrl = `${protocol}://${host}`;
   const uploaded = req.files.map((file) => ({
     url: `${serverUrl}/uploads/${file.filename}`,
     filename: file.filename,
