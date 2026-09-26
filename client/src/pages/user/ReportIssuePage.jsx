@@ -182,7 +182,7 @@ const ReportIssuePage = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6 transition-colors duration-300">
       {/* Header */}
       <div className="space-y-1">
-        <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
+        <div className="flex items-center gap-2 text-sky-600 dark:text-sky-400 text-xs font-bold uppercase tracking-wider">
           <ShieldAlert className="w-4 h-4" />
           <span>New Civic Report & 3D City Geotagging</span>
         </div>
@@ -207,7 +207,7 @@ const ReportIssuePage = () => {
         <div className="lg:col-span-7 space-y-6">
           {/* Section 1: Problem Details & AI Classification */}
           <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-5 shadow-xl">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 flex items-center gap-2">
               <span>1. Problem Details & AI Classification</span>
             </h2>
 
@@ -221,7 +221,7 @@ const ReportIssuePage = () => {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="e.g., Streetlight pole dark and flickering near Block C"
-                className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
               />
             </div>
 
@@ -235,25 +235,25 @@ const ReportIssuePage = () => {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Describe the severity, exact position, hazards, or how long this issue has persisted..."
-                className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors"
               />
             </div>
 
             {/* AI Helper Banner */}
             {aiLoading && (
               <div className="p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 flex items-center gap-2.5 text-xs animate-pulse">
-                <Sparkles className="w-4 h-4 text-emerald-500 animate-spin" />
+                <Sparkles className="w-4 h-4 text-sky-500 animate-spin" />
                 <span className="text-slate-600 dark:text-slate-400">AI is analyzing issue title and description...</span>
               </div>
             )}
             {!aiLoading && aiSuggestions && (
-              <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/30 flex flex-wrap items-center justify-between gap-3 text-xs animate-in fade-in">
+              <div className="p-3.5 rounded-2xl bg-sky-50 dark:bg-sky-950/40 border border-sky-300 dark:border-sky-500/30 flex flex-wrap items-center justify-between gap-3 text-xs animate-in fade-in">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-600 dark:text-sky-400 flex items-center justify-center">
                     <Sparkles className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="font-semibold text-emerald-800 dark:text-emerald-300">AI Recommendation:</span>
+                    <span className="font-semibold text-sky-800 dark:text-sky-300">AI Recommendation:</span>
                     <span className="text-slate-700 dark:text-slate-300 ml-1.5">
                       Suggested Category <strong>{aiSuggestions.category}</strong> • Recommended Priority{' '}
                       <strong className="text-amber-600 dark:text-amber-300">{aiSuggestions.priority}</strong>
@@ -265,7 +265,7 @@ const ReportIssuePage = () => {
                   <button
                     type="button"
                     onClick={() => setCategory(aiSuggestions.category)}
-                    className="px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-sm"
+                    className="px-3 py-1 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-sm"
                   >
                     Apply AI Category
                   </button>
@@ -286,7 +286,7 @@ const ReportIssuePage = () => {
                     onClick={() => setCategory(cat)}
                     className={`px-3.5 py-2.5 rounded-xl border text-xs font-semibold text-left transition-all ${
                       category === cat
-                        ? 'bg-emerald-500/15 border-emerald-500 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500'
+                        ? 'bg-sky-500/15 border-sky-500 text-sky-700 dark:text-sky-300 ring-1 ring-sky-500'
                         : 'bg-slate-100 dark:bg-slate-900/80 border-slate-300 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-800'
                     }`}
                   >
@@ -320,7 +320,7 @@ const ReportIssuePage = () => {
                           ? 'bg-amber-500/20 border-amber-500 text-amber-600 dark:text-amber-400'
                           : prio === 'MEDIUM'
                           ? 'bg-blue-500/20 border-blue-500 text-blue-600 dark:text-blue-400'
-                          : 'bg-emerald-500/20 border-emerald-500 text-emerald-600 dark:text-emerald-400'
+                          : 'bg-sky-500/20 border-sky-500 text-sky-600 dark:text-sky-400'
                         : 'bg-slate-100 dark:bg-slate-900 border-slate-300 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
                     }`}
                   >
@@ -333,7 +333,7 @@ const ReportIssuePage = () => {
 
           {/* Section 2: Photo Evidence */}
           <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-xl">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 flex items-center gap-2">
               <Camera className="w-4 h-4" />
               <span>2. Visual Proof (Before Photo)</span>
             </h2>
@@ -352,7 +352,7 @@ const ReportIssuePage = () => {
         <div className="lg:col-span-5 space-y-6">
           <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-xl sticky top-24">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 flex items-center gap-2">
                 <Compass className="w-4 h-4" />
                 <span>3. Location & 3D City Environment</span>
               </h2>
@@ -363,7 +363,7 @@ const ReportIssuePage = () => {
                   onClick={() => setMapMode('3d')}
                   className={`px-2.5 py-1 rounded-lg font-semibold transition-all ${
                     mapMode === '3d'
-                      ? 'bg-emerald-600 text-white'
+                      ? 'bg-sky-600 text-white'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
@@ -374,7 +374,7 @@ const ReportIssuePage = () => {
                   onClick={() => setMapMode('leaflet')}
                   className={`px-2.5 py-1 rounded-lg font-semibold transition-all ${
                     mapMode === 'leaflet'
-                      ? 'bg-emerald-600 text-white'
+                      ? 'bg-sky-600 text-white'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
@@ -393,7 +393,7 @@ const ReportIssuePage = () => {
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   placeholder="e.g., Near Library Walkway Gate 3"
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-emerald-500"
+                  className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-sky-500"
                 />
               </div>
 
@@ -406,7 +406,7 @@ const ReportIssuePage = () => {
                   value={landmark}
                   onChange={(e) => setLandmark(e.target.value)}
                   placeholder="e.g., Opposite Science Auditorium"
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-emerald-500"
+                  className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-sky-500"
                 />
               </div>
             </div>
@@ -433,7 +433,7 @@ const ReportIssuePage = () => {
             </div>
 
             <p className="text-[11px] text-slate-500 dark:text-slate-400 text-center">
-              Coordinates: <span className="font-mono text-emerald-600 dark:text-emerald-400">{latitude.toFixed(4)}, {longitude.toFixed(4)}</span>
+              Coordinates: <span className="font-mono text-sky-600 dark:text-sky-400">{latitude.toFixed(4)}, {longitude.toFixed(4)}</span>
             </p>
 
             {/* Submit Actions */}
@@ -448,7 +448,7 @@ const ReportIssuePage = () => {
               <button
                 type="submit"
                 disabled={submitting}
-                className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-xl shadow-emerald-900/40 transition-all hover:scale-[1.02] flex items-center gap-2 disabled:opacity-50"
+                className="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-xl shadow-sky-900/40 transition-all hover:scale-[1.02] flex items-center gap-2 disabled:opacity-50"
               >
                 {submitting ? (
                   <>

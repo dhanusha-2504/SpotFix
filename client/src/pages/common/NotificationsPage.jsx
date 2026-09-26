@@ -54,7 +54,7 @@ const NotificationsPage = () => {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
+          <span className="text-xs font-bold uppercase tracking-widest text-sky-400">
             Notifications Center
           </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white">System Alerts & Updates</h1>
@@ -66,7 +66,7 @@ const NotificationsPage = () => {
         {notifications.some((n) => !n.isRead) && (
           <button
             onClick={handleMarkAllRead}
-            className="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-emerald-400 hover:text-white hover:bg-slate-800 text-xs font-semibold flex items-center gap-2 transition-all self-start sm:self-auto"
+            className="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-sky-400 hover:text-white hover:bg-slate-800 text-xs font-semibold flex items-center gap-2 transition-all self-start sm:self-auto"
           >
             <CheckCheck className="w-4 h-4" />
             Mark All as Read
@@ -89,14 +89,14 @@ const NotificationsPage = () => {
               key={n._id}
               onClick={() => handleNotificationClick(n)}
               className={`p-5 hover:bg-slate-900/60 cursor-pointer transition-colors flex items-start justify-between gap-4 ${
-                !n.isRead ? 'bg-emerald-950/20' : ''
+                !n.isRead ? 'bg-sky-950/20' : ''
               }`}
             >
               <div className="flex items-start gap-3.5">
                 <div
                   className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
                     !n.isRead
-                      ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                      ? 'bg-sky-500/20 text-sky-400 border border-sky-500/30'
                       : 'bg-slate-900 text-slate-500 border border-slate-800'
                   }`}
                 >
@@ -106,7 +106,7 @@ const NotificationsPage = () => {
                   <div className="flex items-center gap-2">
                     <h4 className="text-xs sm:text-sm font-bold text-white">{n.title}</h4>
                     {!n.isRead && (
-                      <span className="text-[9px] uppercase px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">
+                      <span className="text-[9px] uppercase px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-400 font-bold">
                         New
                       </span>
                     )}
@@ -120,7 +120,7 @@ const NotificationsPage = () => {
               </div>
 
               {n.link && (
-                <div className="text-slate-500 hover:text-emerald-400 shrink-0">
+                <div className="text-slate-500 hover:text-sky-400 shrink-0">
                   <ExternalLink className="w-4 h-4" />
                 </div>
               )}

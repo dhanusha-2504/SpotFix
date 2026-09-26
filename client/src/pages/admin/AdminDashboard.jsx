@@ -85,7 +85,7 @@ const AdminDashboard = () => {
       {/* Top Banner */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+          <span className="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">
             Administrative Operations & Governance
           </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
@@ -99,21 +99,21 @@ const AdminDashboard = () => {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setShowTwin(!showTwin)}
-            className="px-4 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-bold text-xs transition-all flex items-center gap-1.5 shadow-sm"
+            className="px-4 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 font-bold text-xs transition-all flex items-center gap-1.5 shadow-sm"
           >
-            <Compass className="w-4 h-4 text-emerald-500" />
+            <Compass className="w-4 h-4 text-sky-500" />
             {showTwin ? 'Hide 3D City' : 'Show 3D City'}
           </button>
           <Link
             to="/admin/issues"
-            className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-900/30 transition-all flex items-center gap-2"
+            className="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-lg shadow-sky-900/30 transition-all flex items-center gap-2"
           >
             <Layers className="w-4 h-4" />
             Manage All Issues
           </Link>
           <Link
             to="/admin/analytics"
-            className="px-4 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:text-emerald-600 font-bold text-xs transition-all flex items-center gap-1.5 shadow-sm"
+            className="px-4 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:text-sky-600 font-bold text-xs transition-all flex items-center gap-1.5 shadow-sm"
           >
             <BarChart3 className="w-4 h-4" />
             Analytics
@@ -126,7 +126,7 @@ const AdminDashboard = () => {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Compass className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
+              <Compass className="w-4 h-4 text-sky-500 dark:text-sky-400" />
               <h2 className="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
                 Live Geospatial 3D City Model
               </h2>
@@ -169,7 +169,7 @@ const AdminDashboard = () => {
         </div>
 
         <div className="p-4 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-1">
-          <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Resolved</span>
+          <span className="text-[11px] text-sky-600 dark:text-sky-400 font-semibold uppercase">Resolved</span>
           <p className="text-2xl font-bold text-slate-900 dark:text-white">{summary.resolvedIssues}</p>
         </div>
 
@@ -191,7 +191,7 @@ const AdminDashboard = () => {
         {/* Category Breakdown Bar Chart */}
         <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">
               Issues by Category
             </h3>
             <span className="text-[11px] text-slate-500 dark:text-slate-400">Volume distribution</span>
@@ -221,7 +221,7 @@ const AdminDashboard = () => {
         {/* Priority Breakdown Pie Chart */}
         <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">
               Issues by Priority Tier
             </h3>
             <span className="text-[11px] text-slate-500 dark:text-slate-400">Severity split</span>
@@ -273,7 +273,7 @@ const AdminDashboard = () => {
       <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400 flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span>Field Staff Workload & Task Distribution</span>
             </h3>
@@ -281,7 +281,7 @@ const AdminDashboard = () => {
           </div>
           <Link
             to="/admin/users?role=staff"
-            className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+            className="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1"
           >
             Manage Staff <ArrowRight className="w-3.5 h-3.5" />
           </Link>
@@ -310,7 +310,7 @@ const AdminDashboard = () => {
                     <td className="py-3 px-4 text-slate-700 dark:text-slate-300">{s.department}</td>
                     <td className="py-3 px-4 font-bold text-sky-600 dark:text-sky-400">{s.assigned}</td>
                     <td className="py-3 px-4 font-bold text-amber-600 dark:text-amber-400">{s.inProgress}</td>
-                    <td className="py-3 px-4 font-bold text-emerald-600 dark:text-emerald-400">{s.completed}</td>
+                    <td className="py-3 px-4 font-bold text-sky-600 dark:text-sky-400">{s.completed}</td>
                     <td className="py-3 px-4 font-extrabold text-slate-900 dark:text-white">{s.total}</td>
                   </tr>
                 ))
@@ -329,12 +329,12 @@ const AdminDashboard = () => {
       {/* Recent Issues Table */}
       <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">
             Latest Reported Issues
           </h3>
           <Link
             to="/admin/issues"
-            className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+            className="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1"
           >
             View All Issues <ArrowRight className="w-3.5 h-3.5" />
           </Link>
@@ -357,7 +357,7 @@ const AdminDashboard = () => {
               {recentIssues && recentIssues.length > 0 ? (
                 recentIssues.map((issue) => (
                   <tr key={issue._id} className="hover:bg-slate-100/50 dark:hover:bg-slate-900/40 transition-colors">
-                    <td className="py-3 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">
+                    <td className="py-3 px-4 font-mono font-bold text-sky-600 dark:text-sky-400">
                       {issue.issueCode}
                     </td>
                     <td className="py-3 px-4 font-semibold text-slate-900 dark:text-white truncate max-w-[200px]">
@@ -374,7 +374,7 @@ const AdminDashboard = () => {
                     <td className="py-3 px-4">
                       <Link
                         to={`/admin/issues/${issue._id}`}
-                        className="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold"
+                        className="text-sky-600 dark:text-sky-400 hover:underline font-semibold"
                       >
                         Inspect →
                       </Link>

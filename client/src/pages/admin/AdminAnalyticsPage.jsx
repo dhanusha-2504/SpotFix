@@ -52,7 +52,7 @@ const AdminAnalyticsPage = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 transition-colors duration-300">
       <div>
-        <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+        <span className="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">
           Analytics & Performance Intelligence
         </span>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
@@ -68,18 +68,18 @@ const AdminAnalyticsPage = () => {
         <div className="p-6 rounded-3xl glass-card border border-slate-200 dark:border-slate-800 space-y-2">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
             <span className="text-xs font-bold uppercase tracking-wider">Average Resolution Time</span>
-            <Clock className="w-5 h-5 text-emerald-500 dark:text-emerald-400" />
+            <Clock className="w-5 h-5 text-sky-500 dark:text-sky-400" />
           </div>
           <p className="text-3xl font-extrabold text-slate-900 dark:text-white">
             {summary.avgResolutionHours} <span className="text-base text-slate-500 dark:text-slate-400 font-medium">Hours</span>
           </p>
-          <p className="text-[11px] text-emerald-600 dark:text-emerald-400">Within the 48-hour municipal SLA target</p>
+          <p className="text-[11px] text-sky-600 dark:text-sky-400">Within the 48-hour municipal SLA target</p>
         </div>
 
         <div className="p-6 rounded-3xl glass-card border border-slate-200 dark:border-slate-800 space-y-2">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
             <span className="text-xs font-bold uppercase tracking-wider">Resolution Success Rate</span>
-            <CheckCircle2 className="w-5 h-5 text-teal-600 dark:text-teal-400" />
+            <CheckCircle2 className="w-5 h-5 text-sky- dark:text-sky-" />
           </div>
           <p className="text-3xl font-extrabold text-slate-900 dark:text-white">
             {summary.totalIssues > 0 ? Math.round((summary.resolvedIssues / summary.totalIssues) * 100) : 0}%
@@ -100,7 +100,7 @@ const AdminAnalyticsPage = () => {
       {/* 7-Day Inflow Trend Line Chart */}
       <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+          <h3 className="text-sm font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">
             Issue Submission Trend (Last 7 Days)
           </h3>
           <span className="text-xs text-slate-500 dark:text-slate-400">Daily ticket inflow</span>

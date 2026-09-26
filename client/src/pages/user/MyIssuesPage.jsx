@@ -102,7 +102,7 @@ const MyIssuesPage = () => {
 
         <Link
           to="/report-issue"
-          className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-900/30 transition-all flex items-center gap-2 self-start sm:self-auto"
+          className="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-lg shadow-sky-900/30 transition-all flex items-center gap-2 self-start sm:self-auto"
         >
           <PlusCircle className="w-4 h-4" />
           Report Issue
@@ -123,7 +123,7 @@ const MyIssuesPage = () => {
                 setPage(1);
               }}
               placeholder="Search by title, ID, address..."
-              className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+              className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
             />
           </div>
 
@@ -135,7 +135,7 @@ const MyIssuesPage = () => {
                 setCategory(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
             >
               <option value="ALL">All Categories</option>
               {CATEGORIES.filter((c) => c !== 'ALL').map((c) => (
@@ -154,7 +154,7 @@ const MyIssuesPage = () => {
                 setStatus(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
             >
               <option value="ALL">All Statuses</option>
               {STATUSES.filter((s) => s !== 'ALL').map((s) => (
@@ -173,7 +173,7 @@ const MyIssuesPage = () => {
                 setSortBy(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
             >
               <option value="newest">Newest First</option>
               <option value="oldest">Oldest First</option>
@@ -212,11 +212,11 @@ const MyIssuesPage = () => {
               <Link
                 key={issue._id}
                 to={`/issues/${issue._id}`}
-                className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 flex flex-col justify-between space-y-4 group transition-all"
+                className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-sky-500/40 flex flex-col justify-between space-y-4 group transition-all"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono tracking-wider">
+                    <span className="text-xs font-bold text-sky-600 dark:text-sky-400 font-mono tracking-wider">
                       {issue.issueCode}
                     </span>
                     <div className="flex items-center gap-1.5">
@@ -226,7 +226,7 @@ const MyIssuesPage = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors line-clamp-1">
+                    <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors line-clamp-1">
                       {issue.title}
                     </h3>
                     <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
@@ -257,7 +257,7 @@ const MyIssuesPage = () => {
 
                 <div className="pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
                   <span className="flex items-center gap-1 truncate max-w-[170px]">
-                    <MapPin className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
+                    <MapPin className="w-3.5 h-3.5 text-sky-500 dark:text-sky-400 shrink-0" />
                     {issue.location?.address || 'Pinned on map'}
                   </span>
                   <span className="flex items-center gap-1 shrink-0">

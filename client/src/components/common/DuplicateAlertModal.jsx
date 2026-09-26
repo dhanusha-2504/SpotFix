@@ -47,7 +47,7 @@ const DuplicateAlertModal = ({
                 className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 space-y-2 hover:border-slate-700 transition-colors"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-emerald-400 tracking-wide font-mono">
+                  <span className="text-xs font-bold text-sky-400 tracking-wide font-mono">
                     {issue.issueCode}
                   </span>
                   <div className="flex items-center gap-2">
@@ -70,7 +70,7 @@ const DuplicateAlertModal = ({
                   <Link
                     to={`/issues/${issue._id}`}
                     target="_blank"
-                    className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1"
+                    className="text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1"
                   >
                     View Existing Report <ExternalLink className="w-3 h-3" />
                   </Link>

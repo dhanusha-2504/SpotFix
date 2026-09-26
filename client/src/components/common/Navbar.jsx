@@ -121,7 +121,7 @@ const Navbar = () => {
                       to="/dashboard"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/dashboard')
-                          ? 'bg-slate-200 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold'
+                          ? 'bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                       }`}
                     >
@@ -132,8 +132,8 @@ const Navbar = () => {
                       to="/report-issue"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/report-issue')
-                          ? 'bg-emerald-600 text-white font-semibold shadow-md shadow-emerald-600/30'
-                          : 'text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10'
+                          ? 'bg-sky-600 text-white font-semibold shadow-md shadow-sky-600/30'
+                          : 'text-sky-600 dark:text-sky-400 hover:bg-sky-500/10'
                       }`}
                     >
                       <PlusCircle className="w-4 h-4" />
@@ -143,7 +143,7 @@ const Navbar = () => {
                       to="/my-issues"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/my-issues')
-                          ? 'bg-slate-200 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold'
+                          ? 'bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                       }`}
                     >
@@ -159,7 +159,7 @@ const Navbar = () => {
                       to="/admin"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/admin')
-                          ? 'bg-slate-200 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold'
+                          ? 'bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                       }`}
                     >
@@ -170,7 +170,7 @@ const Navbar = () => {
                       to="/admin/issues"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/admin/issues')
-                          ? 'bg-slate-200 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold'
+                          ? 'bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                       }`}
                     >
@@ -181,7 +181,7 @@ const Navbar = () => {
                       to="/admin/users"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/admin/users')
-                          ? 'bg-slate-200 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold'
+                          ? 'bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                       }`}
                     >
@@ -192,7 +192,7 @@ const Navbar = () => {
                       to="/admin/analytics"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/admin/analytics')
-                          ? 'bg-slate-200 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold'
+                          ? 'bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                       }`}
                     >
@@ -208,7 +208,7 @@ const Navbar = () => {
                       to="/staff"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/staff')
-                          ? 'bg-slate-200 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold'
+                          ? 'bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                       }`}
                     >
@@ -219,7 +219,7 @@ const Navbar = () => {
                       to="/staff/issues"
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                         isActive('/staff/issues')
-                          ? 'bg-slate-200 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-semibold'
+                          ? 'bg-slate-200 dark:bg-slate-800 text-sky-600 dark:text-sky-400 font-semibold'
                           : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
                       }`}
                     >
@@ -247,7 +247,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   to="/register"
-                  className="px-4 py-2 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-lg shadow-emerald-900/30 transition-all hover:scale-[1.02]"
+                  className="px-4 py-2 text-sm font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-xl shadow-lg shadow-sky-900/30 transition-all hover:scale-[1.02]"
                 >
                   Register
                 </Link>
@@ -263,7 +263,7 @@ const Navbar = () => {
                   >
                     <Bell className="w-4 h-4" />
                     {unreadCount > 0 && (
-                      <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 text-[10px] font-bold text-slate-950 flex items-center justify-center animate-pulse">
+                      <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-sky-500 text-[10px] font-bold text-slate-950 flex items-center justify-center animate-pulse">
                         {unreadCount > 9 ? '9+' : unreadCount}
                       </span>
                     )}
@@ -273,13 +273,13 @@ const Navbar = () => {
                     <div className="absolute right-0 mt-2 w-80 sm:w-96 rounded-2xl glass-panel border border-slate-200 dark:border-slate-800 shadow-2xl z-50 py-2 animate-in fade-in slide-in-from-top-2 duration-150">
                       <div className="px-4 py-2.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <Bell className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
+                          <Bell className="w-4 h-4 text-sky-500 dark:text-sky-400" />
                           <span className="font-semibold text-sm text-slate-900 dark:text-white">Notifications</span>
                         </div>
                         <Link
                           to="/notifications"
                           onClick={() => setNotifDropdownOpen(false)}
-                          className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline font-medium"
+                          className="text-xs text-sky-600 dark:text-sky-400 hover:underline font-medium"
                         >
                           View All
                         </Link>
@@ -296,13 +296,13 @@ const Navbar = () => {
                               key={n._id}
                               onClick={() => handleMarkAsRead(n._id, n.link)}
                               className={`p-3.5 hover:bg-slate-100 dark:hover:bg-slate-800/60 cursor-pointer transition-colors ${
-                                !n.isRead ? 'bg-emerald-50 dark:bg-emerald-950/20' : ''
+                                !n.isRead ? 'bg-sky-50 dark:bg-sky-950/20' : ''
                               }`}
                             >
                               <div className="flex items-start justify-between gap-2">
                                 <p className="text-xs font-semibold text-slate-900 dark:text-slate-200">{n.title}</p>
                                 {!n.isRead && (
-                                  <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0 mt-1"></span>
+                                  <span className="w-2 h-2 rounded-full bg-sky-500 shrink-0 mt-1"></span>
                                 )}
                               </div>
                               <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
@@ -325,14 +325,14 @@ const Navbar = () => {
                     onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
                     className="flex items-center gap-2.5 p-1.5 sm:px-3 sm:py-1.5 rounded-xl bg-slate-200/80 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-800 hover:bg-slate-300 dark:hover:bg-slate-800 transition-all text-left"
                   >
-                    <div className="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-bold text-xs">
+                    <div className="w-7 h-7 rounded-lg bg-sky-500/20 border border-sky-500/30 flex items-center justify-center text-sky-600 dark:text-sky-400 font-bold text-xs">
                       {user?.name?.charAt(0).toUpperCase() || 'U'}
                     </div>
                     <div className="hidden lg:block text-left">
                       <p className="text-xs font-semibold text-slate-900 dark:text-white leading-tight truncate max-w-[120px]">
                         {user?.name}
                       </p>
-                      <p className="text-[10px] text-emerald-600 dark:text-emerald-400 uppercase font-semibold tracking-wider">
+                      <p className="text-[10px] text-sky-600 dark:text-sky-400 uppercase font-semibold tracking-wider">
                         {role}
                       </p>
                     </div>
@@ -343,7 +343,7 @@ const Navbar = () => {
                       <div className="px-4 py-2.5 border-b border-slate-200 dark:border-slate-800">
                         <p className="text-xs font-semibold text-slate-900 dark:text-white truncate">{user?.name}</p>
                         <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate">{user?.email}</p>
-                        <span className="inline-block mt-1.5 text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                        <span className="inline-block mt-1.5 text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">
                           {role} role
                         </span>
                       </div>
@@ -407,7 +407,7 @@ const Navbar = () => {
                 <Link
                   to="/report-issue"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 rounded-lg text-sm text-emerald-600 dark:text-emerald-400 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800"
+                  className="block px-3 py-2 rounded-lg text-sm text-sky-600 dark:text-sky-400 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800"
                 >
                   + Report Issue
                 </Link>

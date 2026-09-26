@@ -95,7 +95,7 @@ const StaffDashboard = () => {
         </div>
 
         <div className="p-4 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-1">
-          <span className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Resolved</span>
+          <span className="text-xs text-sky-600 dark:text-sky-400 font-semibold uppercase">Resolved</span>
           <p className="text-2xl font-bold text-slate-900 dark:text-white">{metrics.resolvedCount}</p>
         </div>
       </div>

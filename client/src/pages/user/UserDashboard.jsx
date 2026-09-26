@@ -65,7 +65,7 @@ const UserDashboard = () => {
       {/* Welcome Banner */}
       <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden shadow-xl">
         <div className="space-y-1.5 z-10">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-500/10 text-sky-600 dark:text-sky-400 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Citizen Action Hub & 3D City Map
           </div>
@@ -80,7 +80,7 @@ const UserDashboard = () => {
         <div className="flex items-center gap-3 z-10 shrink-0">
           <Link
             to="/report-issue"
-            className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-900/40 transition-all hover:scale-[1.02] flex items-center gap-2"
+            className="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-xl shadow-sky-900/40 transition-all hover:scale-[1.02] flex items-center gap-2"
           >
             <PlusCircle className="w-5 h-5" />
             Report New Issue
@@ -118,7 +118,7 @@ const UserDashboard = () => {
         <div className="p-4 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-2">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
             <span className="text-xs font-semibold">Total Reports</span>
-            <Layers className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
+            <Layers className="w-4 h-4 text-sky-500 dark:text-sky-400" />
           </div>
           <p className="text-2xl font-bold text-slate-900 dark:text-white">{totalCount}</p>
         </div>
@@ -150,7 +150,7 @@ const UserDashboard = () => {
         <div className="p-4 rounded-2xl glass-card border border-slate-200 dark:border-slate-800 space-y-2">
           <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
             <span className="text-xs font-semibold">Resolved</span>
-            <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
+            <CheckCircle2 className="w-4 h-4 text-sky-500 dark:text-sky-400" />
           </div>
           <p className="text-2xl font-bold text-slate-900 dark:text-white">{resolvedCount}</p>
         </div>
@@ -169,7 +169,7 @@ const UserDashboard = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <div className="flex items-center gap-2">
-              <Compass className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
+              <Compass className="w-4 h-4 text-sky-500 dark:text-sky-400" />
               <h2 className="text-lg font-bold text-slate-900 dark:text-white">
                 3D Smart Civic Command Center
               </h2>
@@ -184,7 +184,7 @@ const UserDashboard = () => {
               onClick={() => setActiveTab('twin')}
               className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                 activeTab === 'twin'
-                  ? 'bg-emerald-600 text-white shadow-md'
+                  ? 'bg-sky-600 text-white shadow-md'
                   : 'bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700'
               }`}
             >
@@ -194,7 +194,7 @@ const UserDashboard = () => {
               onClick={() => setActiveTab('list')}
               className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                 activeTab === 'list'
-                  ? 'bg-emerald-600 text-white shadow-md'
+                  ? 'bg-sky-600 text-white shadow-md'
                   : 'bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700'
               }`}
             >
@@ -224,7 +224,7 @@ const UserDashboard = () => {
           </div>
           <Link
             to="/my-issues"
-            className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+            className="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1"
           >
             View All My Issues <ArrowRight className="w-3.5 h-3.5" />
           </Link>
@@ -251,11 +251,11 @@ const UserDashboard = () => {
               <Link
                 key={issue._id}
                 to={`/issues/${issue._id}`}
-                className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 flex flex-col justify-between space-y-4 group transition-all"
+                className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-sky-500/40 flex flex-col justify-between space-y-4 group transition-all"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono tracking-wider">
+                    <span className="text-xs font-bold text-sky-600 dark:text-sky-400 font-mono tracking-wider">
                       {issue.issueCode}
                     </span>
                     <div className="flex items-center gap-2">
@@ -265,7 +265,7 @@ const UserDashboard = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors line-clamp-1">
+                    <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors line-clamp-1">
                       {issue.title}
                     </h3>
                     <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
@@ -292,7 +292,7 @@ const UserDashboard = () => {
 
                 <div className="pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
                   <span className="flex items-center gap-1 truncate max-w-[180px]">
-                    <MapPin className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
+                    <MapPin className="w-3.5 h-3.5 text-sky-500 dark:text-sky-400 shrink-0" />
                     {issue.location?.address || 'Pinned on map'}
                   </span>
                   <span className="flex items-center gap-1 shrink-0">

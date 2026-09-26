@@ -72,7 +72,7 @@ const TimelineVisualizer = ({ currentStatus = 'REPORTED' }) => {
         
         {/* Active progress connector line */}
         <div
-          className="absolute top-1/2 left-4 -translate-y-1/2 h-1 bg-gradient-to-r from-emerald-500 to-teal-400 -z-0 rounded-full transition-all duration-500"
+          className="absolute top-1/2 left-4 -translate-y-1/2 h-1 bg-gradient-to-r from-sky-500 to-sky- -z-0 rounded-full transition-all duration-500"
           style={{
             width: `${Math.min(100, Math.max(0, ((currentStepNum - 1) / (MAIN_STAGES.length - 1)) * 100))}%`,
           }}
@@ -89,9 +89,9 @@ const TimelineVisualizer = ({ currentStatus = 'REPORTED' }) => {
               <div
                 className={`w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 ${
                   isCurrent
-                    ? 'bg-emerald-500 text-slate-950 ring-4 ring-emerald-500/20 shadow-lg shadow-emerald-500/40 scale-110'
+                    ? 'bg-sky-500 text-slate-950 ring-4 ring-sky-500/20 shadow-lg shadow-sky-500/40 scale-110'
                     : isCompleted
-                    ? 'bg-emerald-600/90 text-white shadow-md shadow-emerald-900/40'
+                    ? 'bg-sky-600/90 text-white shadow-md shadow-sky-900/40'
                     : 'bg-slate-900 text-slate-500 border border-slate-700'
                 }`}
               >
@@ -100,7 +100,7 @@ const TimelineVisualizer = ({ currentStatus = 'REPORTED' }) => {
               <span
                 className={`text-[11px] font-medium tracking-tight mt-2 text-center whitespace-nowrap transition-colors ${
                   isCurrent
-                    ? 'text-emerald-400 font-bold'
+                    ? 'text-sky-400 font-bold'
                     : isCompleted
                     ? 'text-slate-300'
                     : 'text-slate-500'

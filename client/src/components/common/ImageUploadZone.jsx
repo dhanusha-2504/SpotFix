@@ -77,8 +77,8 @@ const ImageUploadZone = ({
           onClick={() => fileInputRef.current?.click()}
           className={`border-2 border-dashed rounded-2xl p-6 text-center cursor-pointer transition-all flex flex-col items-center justify-center gap-2 ${
             uploading
-              ? 'bg-slate-900/60 border-emerald-500/50'
-              : 'border-slate-800 hover:border-emerald-500/50 hover:bg-slate-900/40 bg-slate-900/20'
+              ? 'bg-slate-900/60 border-sky-500/50'
+              : 'border-slate-800 hover:border-sky-500/50 hover:bg-slate-900/40 bg-slate-900/20'
           }`}
         >
           <input
@@ -92,12 +92,12 @@ const ImageUploadZone = ({
 
           {uploading ? (
             <div className="flex flex-col items-center gap-2 py-2">
-              <Loader2 className="w-8 h-8 text-emerald-400 animate-spin" />
+              <Loader2 className="w-8 h-8 text-sky-400 animate-spin" />
               <p className="text-xs text-slate-300 font-medium">Uploading & optimizing photo...</p>
             </div>
           ) : (
             <>
-              <div className="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-emerald-400 mb-1">
+              <div className="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-sky-400 mb-1">
                 <UploadCloud className="w-6 h-6" />
               </div>
               <p className="text-xs font-semibold text-slate-200">

@@ -314,7 +314,7 @@ const IssueDetailsPage = () => {
       <div className="flex items-center justify-between">
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-emerald-400 transition-colors"
+          className="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-sky-400 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to list
@@ -335,7 +335,7 @@ const IssueDetailsPage = () => {
       {/* Main Issue Header Card */}
       <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4 shadow-xl">
         <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400 font-mono">
-          <span className="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 font-bold border border-emerald-500/20">
+          <span className="px-2.5 py-1 rounded-lg bg-sky-500/10 text-sky-400 font-bold border border-sky-500/20">
             {issue.issueCode}
           </span>
           <span>•</span>
@@ -365,7 +365,7 @@ const IssueDetailsPage = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-emerald-400">
+            <div className="w-8 h-8 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-sky-400">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <div>
@@ -415,7 +415,7 @@ const IssueDetailsPage = () => {
             <button
               onClick={handleVerifyResolution}
               disabled={actionLoading}
-              className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-lg shadow-emerald-900/40 transition-all flex items-center gap-2"
+              className="px-6 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold shadow-lg shadow-sky-900/40 transition-all flex items-center gap-2"
             >
               <CheckCircle2 className="w-4 h-4" />
               Verify & Confirm Resolution
@@ -470,7 +470,7 @@ const IssueDetailsPage = () => {
               <button
                 onClick={() => setCompleteModalOpen(true)}
                 disabled={actionLoading}
-                className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2 transition-all shadow-md"
+                className="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold flex items-center gap-2 transition-all shadow-md"
               >
                 <Check className="w-3.5 h-3.5" />
                 Upload Proof & Complete Work
@@ -482,9 +482,9 @@ const IssueDetailsPage = () => {
 
       {/* 3. Admin Governance Bar */}
       {role === 'admin' && (
-        <div className="glass-panel p-5 rounded-3xl border border-emerald-500/30 space-y-3">
+        <div className="glass-panel p-5 rounded-3xl border border-sky-500/30 space-y-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-400">
               <ShieldAlert className="w-4 h-4" />
               <span>Admin Supervisory Actions</span>
             </div>
@@ -496,7 +496,7 @@ const IssueDetailsPage = () => {
                 <button
                   onClick={() => handleAdminReview('APPROVE')}
                   disabled={actionLoading}
-                  className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 transition-all"
+                  className="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold flex items-center gap-1.5 transition-all"
                 >
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   Approve Issue
@@ -514,9 +514,9 @@ const IssueDetailsPage = () => {
 
             <button
               onClick={() => setAssignModalOpen(true)}
-              className="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 hover:border-emerald-500 text-slate-200 text-xs font-bold flex items-center gap-1.5 transition-all"
+              className="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 hover:border-sky-500 text-slate-200 text-xs font-bold flex items-center gap-1.5 transition-all"
             >
-              <User className="w-3.5 h-3.5 text-emerald-400" />
+              <User className="w-3.5 h-3.5 text-sky-400" />
               {issue.assignedTo ? 'Reassign Staff' : 'Assign Field Staff'}
             </button>
           </div>
@@ -528,7 +528,7 @@ const IssueDetailsPage = () => {
         {/* Photo Evidence Gallery */}
         <div className="glass-panel p-6 rounded-3xl border border-slate-800 space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-sky-400 flex items-center gap-2">
               <Camera className="w-4 h-4" />
               <span>Photo Evidence Archive</span>
             </h3>
@@ -556,7 +556,7 @@ const IssueDetailsPage = () => {
                     <span
                       className={`self-start text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded ${
                         img.type === 'AFTER'
-                          ? 'bg-emerald-500 text-slate-950'
+                          ? 'bg-sky-500 text-slate-950'
                           : img.type === 'PROGRESS'
                           ? 'bg-amber-500 text-slate-950'
                           : 'bg-blue-500 text-white'
@@ -579,7 +579,7 @@ const IssueDetailsPage = () => {
         {/* Location & Coordinates Map */}
         <div className="glass-panel p-6 rounded-3xl border border-slate-800 space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-sky-400 flex items-center gap-2">
               <MapPin className="w-4 h-4" />
               <span>Location Coordinates</span>
             </h3>
@@ -599,9 +599,9 @@ const IssueDetailsPage = () => {
       </div>
 
       {/* AI History Summarizer */}
-      <div className="glass-panel p-6 rounded-3xl border border-emerald-500/20 space-y-3">
+      <div className="glass-panel p-6 rounded-3xl border border-sky-500/20 space-y-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400">
+          <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-400">
             <Sparkles className="w-4 h-4" />
             <span>AI Lifecycle Summarizer</span>
           </div>
@@ -609,7 +609,7 @@ const IssueDetailsPage = () => {
             type="button"
             onClick={handleGenerateSummary}
             disabled={aiSummaryLoading}
-            className="px-3 py-1 rounded-lg bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all"
+            className="px-3 py-1 rounded-lg bg-sky-600/20 hover:bg-sky-600 text-sky-300 hover:text-white border border-sky-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all"
           >
             {aiSummaryLoading ? <Loader2 className="w-3 h-3 animate-spin" /> : <Sparkles className="w-3 h-3" />}
             {aiSummary ? 'Refresh AI Digest' : 'Generate Summary Digest'}
@@ -632,7 +632,7 @@ const IssueDetailsPage = () => {
         {/* Audit Trail History */}
         <div className="glass-panel p-6 rounded-3xl border border-slate-800 space-y-4">
           <h3 className="text-sm font-bold uppercase tracking-wider text-white flex items-center gap-2">
-            <Clock className="w-4 h-4 text-emerald-400" />
+            <Clock className="w-4 h-4 text-sky-400" />
             <span>Audit History & Milestones</span>
           </h3>
 
@@ -642,7 +642,7 @@ const IssueDetailsPage = () => {
             ) : (
               history.map((h, idx) => (
                 <div key={idx} className="flex items-start gap-3 text-xs border-l-2 border-slate-800 pl-3 pb-3 relative">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 -left-[18px] top-1 absolute" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-sky-400 -left-[18px] top-1 absolute" />
                   <div className="space-y-1">
                     <div className="flex items-center gap-2">
                       <span className="font-bold text-white">
@@ -668,7 +668,7 @@ const IssueDetailsPage = () => {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h3 className="text-sm font-bold uppercase tracking-wider text-white flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-emerald-400" />
+                <MessageSquare className="w-4 h-4 text-sky-400" />
                 <span>Discussion & Updates</span>
               </h3>
               <span className="text-[11px] text-slate-400">{comments.length} message(s)</span>
@@ -727,12 +727,12 @@ const IssueDetailsPage = () => {
                 value={commentText}
                 onChange={(e) => setCommentText(e.target.value)}
                 placeholder="Write a comment or progress note..."
-                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-emerald-500"
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-sky-500"
               />
               <button
                 type="submit"
                 disabled={commentLoading || !commentText.trim()}
-                className="p-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white disabled:opacity-40 transition-all"
+                className="p-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white disabled:opacity-40 transition-all"
               >
                 <Send className="w-4 h-4" />
               </button>
@@ -795,9 +795,9 @@ const IssueDetailsPage = () => {
       {/* Modal 2: Staff Complete Work Modal */}
       {completeModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in">
-          <div className="glass-panel max-w-md w-full rounded-2xl border border-emerald-500/40 p-6 space-y-4 shadow-2xl">
+          <div className="glass-panel max-w-md w-full rounded-2xl border border-sky-500/40 p-6 space-y-4 shadow-2xl">
             <h3 className="text-base font-bold text-white flex items-center gap-2">
-              <Check className="w-5 h-5 text-emerald-400" />
+              <Check className="w-5 h-5 text-sky-400" />
               <span>Complete Repair Work: {issue.issueCode}</span>
             </h3>
             <p className="text-xs text-slate-400">
@@ -810,7 +810,7 @@ const IssueDetailsPage = () => {
                 value={completionNotes}
                 onChange={(e) => setCompletionNotes(e.target.value)}
                 placeholder="Add brief completion notes (e.g. Patching complete, asphalt cured)..."
-                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-emerald-500"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-sky-500"
               />
 
               <ImageUploadZone
@@ -832,7 +832,7 @@ const IssueDetailsPage = () => {
                 <button
                   type="submit"
                   disabled={actionLoading || completionImages.length === 0}
-                  className="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold disabled:opacity-40"
+                  className="px-5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold disabled:opacity-40"
                 >
                   Submit Completion Proof
                 </button>
@@ -845,9 +845,9 @@ const IssueDetailsPage = () => {
       {/* Modal 3: Admin Staff Assignment Modal */}
       {assignModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in">
-          <div className="glass-panel max-w-md w-full rounded-2xl border border-emerald-500/40 p-6 space-y-4 shadow-2xl">
+          <div className="glass-panel max-w-md w-full rounded-2xl border border-sky-500/40 p-6 space-y-4 shadow-2xl">
             <h3 className="text-base font-bold text-white flex items-center gap-2">
-              <User className="w-5 h-5 text-emerald-400" />
+              <User className="w-5 h-5 text-sky-400" />
               <span>Assign Staff to {issue.issueCode}</span>
             </h3>
 
@@ -860,7 +860,7 @@ const IssueDetailsPage = () => {
                   required
                   value={selectedStaffId}
                   onChange={(e) => setSelectedStaffId(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-emerald-500"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-sky-500"
                 >
                   <option value="">-- Choose registered staff --</option>
                   {staffList.map((s) => (
@@ -878,7 +878,7 @@ const IssueDetailsPage = () => {
                 <select
                   value={selectedPriority}
                   onChange={(e) => setSelectedPriority(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-emerald-500"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-sky-500"
                 >
                   <option value="LOW">LOW</option>
                   <option value="MEDIUM">MEDIUM</option>
@@ -896,7 +896,7 @@ const IssueDetailsPage = () => {
                   value={assignmentNotes}
                   onChange={(e) => setAssignmentNotes(e.target.value)}
                   placeholder="Special instructions for the repair crew..."
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-emerald-500"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-sky-500"
                 />
               </div>
 
@@ -911,7 +911,7 @@ const IssueDetailsPage = () => {
                 <button
                   type="submit"
                   disabled={actionLoading || !selectedStaffId}
-                  className="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold disabled:opacity-40"
+                  className="px-5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold disabled:opacity-40"
                 >
                   Dispatch Staff
                 </button>

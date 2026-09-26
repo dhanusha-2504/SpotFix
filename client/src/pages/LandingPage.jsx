@@ -121,7 +121,7 @@ const LandingPage = () => {
               onClick={() => scrollToScene(idx)}
               className={`group flex items-center justify-between gap-3 px-3 py-2 rounded-xl text-xs font-mono transition-all text-left ${
                 isActive
-                  ? 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 shadow-sm'
+                  ? 'bg-sky-500/15 text-sky-600 dark:text-sky-400 border border-sky-500/30 shadow-sm'
                   : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
               }`}
             >
@@ -132,7 +132,7 @@ const LandingPage = () => {
               <span
                 className={`w-2 h-2 rounded-full transition-all ${
                   isActive
-                    ? 'bg-emerald-500 ring-4 ring-emerald-500/20 scale-110'
+                    ? 'bg-sky-500 ring-4 ring-sky-500/20 scale-110'
                     : 'bg-slate-400 dark:bg-slate-600 group-hover:bg-slate-500'
                 }`}
               />
@@ -150,14 +150,14 @@ const LandingPage = () => {
         {/* ----------------------------------------------------------------------- */}
         <section id="scene-city" className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-12 pt-16 pb-20 max-w-7xl mx-auto">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider shadow-sm backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/25 text-sky-600 dark:text-sky-400 text-xs font-bold uppercase tracking-wider shadow-sm backdrop-blur-md">
               <Sparkles className="w-3.5 h-3.5" />
               Smart Civic Infrastructure Platform
             </div>
 
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.08]">
               Spot it. Track it.{' '}
-              <span className="bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 dark:from-emerald-400 dark:via-teal-300 dark:to-emerald-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-sky-500 via-sky- to-sky-600 dark:from-sky-400 dark:via-teal-300 dark:to-sky-500 bg-clip-text text-transparent">
                 Fix it.
               </span>
             </h1>
@@ -170,7 +170,7 @@ const LandingPage = () => {
               {isAuthenticated ? (
                 <Link
                   to={role === 'admin' ? '/admin' : role === 'staff' ? '/staff' : '/dashboard'}
-                  className="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-900/30 transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
+                  className="px-8 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-xl shadow-sky-900/30 transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
                 >
                   Go to Dashboard ({role})
                   <ArrowRight className="w-4 h-4" />
@@ -179,7 +179,7 @@ const LandingPage = () => {
                 <>
                   <Link
                     to="/report-issue"
-                    className="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-900/30 transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
+                    className="px-8 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-xl shadow-sky-900/30 transition-all hover:scale-[1.02] flex items-center justify-center gap-2"
                   >
                     Report an Issue
                     <ArrowRight className="w-4 h-4" />
@@ -202,7 +202,7 @@ const LandingPage = () => {
               <div className="flex flex-wrap items-center gap-2">
                 <button
                   onClick={() => handleQuickDemoLogin('admin@spotfix.local', 'Admin@1234', '/admin')}
-                  className="px-3 py-1.5 rounded-lg bg-slate-100/80 dark:bg-slate-900/80 border border-emerald-500/40 text-xs font-semibold text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/10 transition-all"
+                  className="px-3 py-1.5 rounded-lg bg-slate-100/80 dark:bg-slate-900/80 border border-sky-500/40 text-xs font-semibold text-sky-700 dark:text-sky-400 hover:bg-sky-500/10 transition-all"
                 >
                   👑 Admin
                 </button>
@@ -298,7 +298,7 @@ const LandingPage = () => {
             <div className="p-5 rounded-2xl glass-card border border-sky-500/30 space-y-3.5">
               <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2.5">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                   <span className="text-xs font-bold font-mono text-slate-900 dark:text-white">AI ANALYSIS HUD</span>
                 </div>
                 <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-sky-500/10 text-sky-600 dark:text-sky-400">
@@ -313,7 +313,7 @@ const LandingPage = () => {
                 </div>
                 <div>
                   <span className="text-[10px] text-slate-600 dark:text-slate-300 uppercase font-semibold block">Duplicate Shield</span>
-                  <span className="font-bold text-emerald-600 dark:text-emerald-400">Zero duplicate match</span>
+                  <span className="font-bold text-sky-600 dark:text-sky-400">Zero duplicate match</span>
                 </div>
                 <div>
                   <span className="text-[10px] text-slate-600 dark:text-slate-300 uppercase font-semibold block">Suggested Priority</span>
@@ -343,7 +343,7 @@ const LandingPage = () => {
         {/* ----------------------------------------------------------------------- */}
         <section id="scene-track" className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-12 py-20 max-w-7xl mx-auto">
           <div className="max-w-2xl ml-auto space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/25 text-sky-600 dark:text-sky-400 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
               <Clock className="w-3.5 h-3.5" />
               Phase 03 // Transparent Governance
             </div>
@@ -358,7 +358,7 @@ const LandingPage = () => {
 
             <div className="grid grid-cols-3 gap-3 pt-2">
               <div className="p-4 rounded-xl glass-card text-center">
-                <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400 font-mono">94.8%</span>
+                <span className="text-2xl font-black text-sky-600 dark:text-sky-400 font-mono">94.8%</span>
                 <p className="text-[11px] font-semibold text-slate-600 dark:text-slate-400 mt-1">SLA Adherence</p>
               </div>
               <div className="p-4 rounded-xl glass-card text-center">
@@ -378,7 +378,7 @@ const LandingPage = () => {
         {/* ----------------------------------------------------------------------- */}
         <section id="scene-fix" className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-12 py-20 max-w-7xl mx-auto">
           <div className="max-w-2xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/25 text-teal-600 dark:text-teal-400 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-/10 border border-sky-/25 text-sky- dark:text-sky- text-xs font-bold uppercase tracking-wider backdrop-blur-md">
               <CheckCircle2 className="w-3.5 h-3.5" />
               Phase 04 // Verified Completion
             </div>
@@ -400,8 +400,8 @@ const LandingPage = () => {
                 <p className="text-[11px] text-slate-600 dark:text-slate-400 mt-0.5">Reported by Citizen at 08:30 AM</p>
               </div>
 
-              <div className="p-4 rounded-xl glass-card border-l-4 border-emerald-500">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+              <div className="p-4 rounded-xl glass-card border-l-4 border-sky-500">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">
                   AFTER REPAIR
                 </span>
                 <p className="text-xs font-bold text-slate-900 dark:text-white mt-1">Smooth Sealed Road Surface</p>
@@ -416,7 +416,7 @@ const LandingPage = () => {
         {/* ----------------------------------------------------------------------- */}
         <section id="scene-smart-city" className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-12 py-24 max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-600 dark:text-sky-400 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
               <ShieldCheck className="w-4 h-4" />
               The SpotFix Vision
             </div>
@@ -432,7 +432,7 @@ const LandingPage = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
                 to="/register"
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-2xl shadow-emerald-900/40 transition-all hover:scale-105 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-2xl shadow-sky-900/40 transition-all hover:scale-105 flex items-center justify-center gap-2"
               >
                 Get Started as a Citizen
                 <ArrowRight className="w-4 h-4" />
@@ -473,7 +473,7 @@ const LandingPage = () => {
                   key={idx}
                   className="p-3 rounded-xl glass-panel text-center flex flex-col items-center justify-between border border-slate-200/60 dark:border-slate-800/60"
                 >
-                  <span className="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400">{step.num}</span>
+                  <span className="text-[10px] font-mono font-bold text-sky-600 dark:text-sky-400">{step.num}</span>
                   <p className="text-xs font-bold text-slate-900 dark:text-slate-100 my-1">{step.title}</p>
                   <p className="text-[10px] text-slate-700 dark:text-slate-300 leading-tight font-medium">{step.desc}</p>
                 </div>

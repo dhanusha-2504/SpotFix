@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
 
 // Custom pin marker icon
 const customMarkerIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
@@ -108,7 +108,7 @@ const LeafletMapPicker = ({
       {!readOnly && (
         <div className="p-3 bg-slate-900/90 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2 z-20">
           <div className="flex items-center gap-2 text-xs text-slate-300">
-            <MapPin className="w-4 h-4 text-emerald-400" />
+            <MapPin className="w-4 h-4 text-sky-400" />
             <span>Click map to place location pin</span>
             <span className="text-slate-500">
               ({position[0].toFixed(4)}, {position[1].toFixed(4)})
@@ -118,7 +118,7 @@ const LeafletMapPicker = ({
             type="button"
             onClick={handleGetCurrentLocation}
             disabled={geoLoading}
-            className="flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-600 hover:text-white transition-all"
+            className="flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-lg bg-sky-600/20 text-sky-400 border border-sky-500/30 hover:bg-sky-600 hover:text-white transition-all"
           >
             <Crosshair className={`w-3.5 h-3.5 ${geoLoading ? 'animate-spin' : ''}`} />
             {geoLoading ? 'Detecting GPS...' : 'Use My GPS Location'}
@@ -149,7 +149,7 @@ const LeafletMapPicker = ({
 
       {readOnly && address && (
         <div className="p-2.5 bg-slate-900/90 border-t border-slate-800 flex items-center gap-2 text-xs text-slate-300">
-          <MapPin className="w-4 h-4 text-emerald-400 shrink-0" />
+          <MapPin className="w-4 h-4 text-sky-400 shrink-0" />
           <span className="truncate">{address}</span>
         </div>
       )}

@@ -69,7 +69,7 @@ const AdminUsersPage = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6 transition-colors duration-300">
       <div>
-        <span className="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+        <span className="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">
           User Directory & RBAC
         </span>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
@@ -99,7 +99,7 @@ const AdminUsersPage = () => {
               setPage(1);
             }}
             placeholder="Search by name, email, department..."
-            className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+            className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
           />
         </div>
 
@@ -109,7 +109,7 @@ const AdminUsersPage = () => {
             setRoleFilter(e.target.value);
             setPage(1);
           }}
-          className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+          className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
         >
           <option value="ALL">All Roles</option>
           <option value="user">Citizens (Users)</option>
@@ -162,7 +162,7 @@ const AdminUsersPage = () => {
                                   ? 'bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20'
                                   : u.role === 'staff'
                                   ? 'bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/20'
-                                  : 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20'
+                                  : 'bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/20'
                               }`}
                             >
                               {u.role}
@@ -196,7 +196,7 @@ const AdminUsersPage = () => {
                               <button
                                 onClick={() => handleSaveEdit(u._id)}
                                 disabled={editLoading}
-                                className="p-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white"
+                                className="p-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white"
                               >
                                 <Check className="w-3.5 h-3.5" />
                               </button>
@@ -210,7 +210,7 @@ const AdminUsersPage = () => {
                           ) : (
                             <button
                               onClick={() => handleStartEdit(u)}
-                              className="p-1.5 rounded-lg text-slate-400 hover:text-emerald-500 hover:bg-slate-100 dark:hover:bg-slate-800"
+                              className="p-1.5 rounded-lg text-slate-400 hover:text-sky-500 hover:bg-slate-100 dark:hover:bg-slate-800"
                               title="Edit Role"
                             >
                               <Edit className="w-3.5 h-3.5" />

@@ -30,7 +30,7 @@ const ProfilePage = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
       <div>
-        <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
+        <span className="text-xs font-bold uppercase tracking-widest text-sky-400">
           Account Settings
         </span>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-white">Your Profile</h1>
@@ -40,7 +40,7 @@ const ProfilePage = () => {
       </div>
 
       {successMsg && (
-        <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs sm:text-sm font-medium flex items-center gap-2.5">
+        <div className="p-4 rounded-2xl bg-sky-500/10 border border-sky-500/20 text-sky-300 text-xs sm:text-sm font-medium flex items-center gap-2.5">
           <CheckCircle className="w-5 h-5 shrink-0" />
           <span>{successMsg}</span>
         </div>
@@ -55,13 +55,13 @@ const ProfilePage = () => {
 
       <form onSubmit={handleSave} className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-6 shadow-xl">
         <div className="flex items-center gap-4 pb-6 border-b border-slate-800">
-          <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-extrabold text-2xl">
+          <div className="w-16 h-16 rounded-2xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center text-sky-400 font-extrabold text-2xl">
             {user?.name?.charAt(0).toUpperCase() || 'U'}
           </div>
           <div>
             <h3 className="text-lg font-bold text-white">{user?.name}</h3>
             <p className="text-xs text-slate-400">{user?.email}</p>
-            <span className="inline-block mt-1 text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span className="inline-block mt-1 text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">
               {role} role
             </span>
           </div>
@@ -79,7 +79,7 @@ const ProfilePage = () => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
               />
             </div>
           </div>
@@ -110,7 +110,7 @@ const ProfilePage = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="+91 98765 43210"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ const ProfilePage = () => {
                 type="text"
                 value={department}
                 onChange={(e) => setDepartment(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-sky-500"
               />
             </div>
           )}
@@ -134,7 +134,7 @@ const ProfilePage = () => {
           <button
             type="submit"
             disabled={saving}
-            className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-900/30 transition-all flex items-center gap-2 disabled:opacity-50"
+            className="px-6 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow-lg shadow-sky-900/30 transition-all flex items-center gap-2 disabled:opacity-50"
           >
             <Save className="w-4 h-4" />
             {saving ? 'Saving...' : 'Save Profile Changes'}

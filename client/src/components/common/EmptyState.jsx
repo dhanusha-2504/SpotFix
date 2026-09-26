@@ -13,7 +13,7 @@ const EmptyState = ({
 }) => {
   return (
     <div className="flex flex-col items-center justify-center p-12 text-center glass-card rounded-2xl border border-dashed border-slate-800 my-4">
-      <div className="w-16 h-16 rounded-2xl bg-slate-900/80 border border-slate-700/50 flex items-center justify-center text-emerald-400 mb-4 shadow-inner">
+      <div className="w-16 h-16 rounded-2xl bg-slate-900/80 border border-slate-700/50 flex items-center justify-center text-sky-400 mb-4 shadow-inner">
         <Icon className="w-8 h-8 opacity-80" />
       </div>
       <h3 className="text-lg font-semibold text-white mb-1.5">{title}</h3>
@@ -21,7 +21,7 @@ const EmptyState = ({
       {actionLink && (
         <Link
           to={actionLink}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all shadow-lg shadow-emerald-900/30 hover:scale-[1.02]"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-medium text-sm transition-all shadow-lg shadow-sky-900/30 hover:scale-[1.02]"
         >
           {ActionIcon && <ActionIcon className="w-4 h-4" />}
           {actionText}
@@ -30,7 +30,7 @@ const EmptyState = ({
       {onActionClick && (
         <button
           onClick={onActionClick}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all shadow-lg shadow-emerald-900/30 hover:scale-[1.02]"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-medium text-sm transition-all shadow-lg shadow-sky-900/30 hover:scale-[1.02]"
         >
           {ActionIcon && <ActionIcon className="w-4 h-4" />}
           {actionText}

@@ -9,7 +9,7 @@ const Footer = () => {
           <SpotFixLogo size="sm" showTagline={false} />
 
           <div className="flex items-center gap-6 text-xs text-slate-600 dark:text-slate-400 font-medium">
-            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">“Spot it. Track it. Fix it.”</span>
+            <span className="text-sky-600 dark:text-sky-400 font-semibold">“Spot it. Track it. Fix it.”</span>
             <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
             <span>Role-Based Workflow</span>
             <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
