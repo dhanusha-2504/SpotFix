@@ -98,6 +98,7 @@ const LandingPage = () => {
         <SpotFixCityExperience
           scrollProgress={scrollProgress}
           activeScene={activeSceneIndex}
+          onSelectHotspot={scrollToScene}
         />
       </div>
 
