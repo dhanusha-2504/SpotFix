@@ -2,14 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
   Search,
-  Filter,
   PlusCircle,
   Calendar,
   MapPin,
   ChevronLeft,
   ChevronRight,
-  Layers,
-  ArrowUpDown,
   AlertCircle,
 } from 'lucide-react';
 import api from '../../services/api';
@@ -47,7 +44,7 @@ const STATUSES = [
 ];
 
 const MyIssuesPage = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   const [issues, setIssues] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -91,12 +88,14 @@ const MyIssuesPage = () => {
   }, [search, category, status, sortBy, page]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6 transition-colors duration-300">
       {/* Top Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-white">My Reported Issues</h1>
-          <p className="text-xs sm:text-sm text-slate-400">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            My Reported Issues
+          </h1>
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
             Track and manage all issues submitted by your account.
           </p>
         </div>
@@ -111,11 +110,11 @@ const MyIssuesPage = () => {
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="glass-panel p-4 rounded-2xl border border-slate-800 space-y-3">
+      <div className="glass-panel p-4 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {/* Search Input */}
           <div className="relative">
-            <Search className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={search}
@@ -124,7 +123,7 @@ const MyIssuesPage = () => {
                 setPage(1);
               }}
               placeholder="Search by title, ID, address..."
-              className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+              className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
             />
           </div>
 
@@ -136,7 +135,7 @@ const MyIssuesPage = () => {
                 setCategory(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
             >
               <option value="ALL">All Categories</option>
               {CATEGORIES.filter((c) => c !== 'ALL').map((c) => (
@@ -155,7 +154,7 @@ const MyIssuesPage = () => {
                 setStatus(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
             >
               <option value="ALL">All Statuses</option>
               {STATUSES.filter((s) => s !== 'ALL').map((s) => (
@@ -174,7 +173,7 @@ const MyIssuesPage = () => {
                 setSortBy(e.target.value);
                 setPage(1);
               }}
-              className="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
+              className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-emerald-500"
             >
               <option value="newest">Newest First</option>
               <option value="oldest">Oldest First</option>
@@ -189,7 +188,7 @@ const MyIssuesPage = () => {
       {loading ? (
         <LoadingSpinner size="lg" text="Fetching your reported issues..." />
       ) : error ? (
-        <div className="p-6 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 text-sm flex items-center gap-3">
+        <div className="p-6 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-600 dark:text-rose-400 text-sm flex items-center gap-3">
           <AlertCircle className="w-5 h-5 shrink-0" />
           <span>{error}</span>
         </div>
@@ -213,11 +212,11 @@ const MyIssuesPage = () => {
               <Link
                 key={issue._id}
                 to={`/issues/${issue._id}`}
-                className="glass-card p-5 rounded-2xl border border-slate-800 hover:border-emerald-500/40 flex flex-col justify-between space-y-4 group transition-all"
+                className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 flex flex-col justify-between space-y-4 group transition-all"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-emerald-400 font-mono tracking-wider">
+                    <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono tracking-wider">
                       {issue.issueCode}
                     </span>
                     <div className="flex items-center gap-1.5">
@@ -227,16 +226,16 @@ const MyIssuesPage = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors line-clamp-1">
+                    <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors line-clamp-1">
                       {issue.title}
                     </h3>
-                    <p className="text-xs text-slate-400 mt-1 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
                       {issue.description}
                     </p>
                   </div>
 
                   {issue.images && issue.images.length > 0 ? (
-                    <div className="w-full h-36 rounded-xl overflow-hidden bg-slate-900 border border-slate-800 relative">
+                    <div className="w-full h-36 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative">
                       <img
                         src={issue.images[0].url}
                         alt={issue.title}
@@ -245,20 +244,20 @@ const MyIssuesPage = () => {
                           e.target.src = 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=400&q=80';
                         }}
                       />
-                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-slate-950/80 text-[10px] font-bold text-slate-300 uppercase">
+                      <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-slate-900/80 text-[10px] font-bold text-white uppercase backdrop-blur-sm">
                         {issue.category}
                       </div>
                     </div>
                   ) : (
-                    <div className="w-full h-20 rounded-xl bg-slate-900/50 border border-slate-800/80 flex items-center justify-center text-xs text-slate-500">
+                    <div className="w-full h-20 rounded-xl bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800/80 flex items-center justify-center text-xs text-slate-500">
                       Category: {issue.category}
                     </div>
                   )}
                 </div>
 
-                <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500">
+                <div className="pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400">
                   <span className="flex items-center gap-1 truncate max-w-[170px]">
-                    <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <MapPin className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400 shrink-0" />
                     {issue.location?.address || 'Pinned on map'}
                   </span>
                   <span className="flex items-center gap-1 shrink-0">
@@ -272,22 +271,22 @@ const MyIssuesPage = () => {
 
           {/* Pagination Controls */}
           {pagination.totalPages > 1 && (
-            <div className="flex items-center justify-between pt-4 border-t border-slate-800">
-              <span className="text-xs text-slate-400">
+            <div className="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-800">
+              <span className="text-xs text-slate-500 dark:text-slate-400">
                 Page {page} of {pagination.totalPages} ({pagination.total} total reports)
               </span>
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={page === 1}
-                  className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white disabled:opacity-40"
+                  className="p-2 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white disabled:opacity-40"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setPage((p) => Math.min(pagination.totalPages, p + 1))}
                   disabled={page === pagination.totalPages}
-                  className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white disabled:opacity-40"
+                  className="p-2 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white disabled:opacity-40"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>

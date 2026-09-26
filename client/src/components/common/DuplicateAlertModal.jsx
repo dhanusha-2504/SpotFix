@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, ExternalLink, ArrowRight, ShieldCheck, X } from 'lucide-react';
+import { AlertTriangle, ExternalLink, ArrowRight, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import StatusBadge from './StatusBadge';
 

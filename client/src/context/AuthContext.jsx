@@ -11,12 +11,19 @@ export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(() => localStorage.getItem('spotfix_token'));
   const [loading, setLoading] = useState(true);
 
+  const logout = () => {
+    localStorage.removeItem('spotfix_token');
+    localStorage.removeItem('spotfix_user');
+    setToken(null);
+    setUser(null);
+  };
+
   useEffect(() => {
     const checkAuth = async () => {
       const storedToken = localStorage.getItem('spotfix_token');
       if (storedToken) {
         try {
-          const res = await api.get('/auth/me');
+          const res = await api.get('/auth/me', { timeout: 4000 });
           if (res.success && res.data) {
             setUser(res.data);
             localStorage.setItem('spotfix_user', JSON.stringify(res.data));
@@ -78,13 +85,6 @@ export const AuthProvider = ({ children }) => {
     } catch (error) {
       return { success: false, message: error.message };
     }
-  };
-
-  const logout = () => {
-    localStorage.removeItem('spotfix_token');
-    localStorage.removeItem('spotfix_user');
-    setToken(null);
-    setUser(null);
   };
 
   const value = {

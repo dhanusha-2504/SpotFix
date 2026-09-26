@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { MapPin, Navigation, Crosshair } from 'lucide-react';
+import { MapPin, Crosshair } from 'lucide-react';
 
 // Fix Leaflet default icon issues in Webpack/Vite
 delete L.Icon.Default.prototype._getIconUrl;
@@ -95,7 +95,7 @@ const LeafletMapPicker = ({
         handleLocationUpdate(lat, lng);
         setGeoLoading(false);
       },
-      (err) => {
+      () => {
         alert('Could not retrieve current location. Please click on the map to pin.');
         setGeoLoading(false);
       }

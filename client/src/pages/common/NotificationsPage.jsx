@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Bell, CheckCheck, Clock, ExternalLink, ShieldAlert } from 'lucide-react';
+import { Bell, CheckCheck, Clock, ExternalLink } from 'lucide-react';
 import api from '../../services/api';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
 import EmptyState from '../../components/common/EmptyState';
@@ -45,7 +45,9 @@ const NotificationsPage = () => {
       if (notif.link) {
         navigate(notif.link);
       }
-    } catch (e) {}
+    } catch {
+      // ignore read error
+    }
   };
 
   return (

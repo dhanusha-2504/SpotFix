@@ -34,7 +34,7 @@ import NotificationsPage from './pages/common/NotificationsPage';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans">
+    <div className="min-h-screen flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans transition-colors duration-300">
       <Navbar />
 
       <main className="flex-1">

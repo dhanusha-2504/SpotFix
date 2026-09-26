@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import {
   ShieldAlert,
   ArrowLeft,
   MapPin,
-  Calendar,
   Clock,
   User,
   CheckCircle2,
   RotateCcw,
   Sparkles,
   Send,
-  Lock,
   MessageSquare,
   AlertTriangle,
   Camera,
@@ -20,7 +18,6 @@ import {
   ShieldCheck,
   Check,
   Loader2,
-  ExternalLink,
 } from 'lucide-react';
 import api from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
@@ -39,7 +36,6 @@ const IssueDetailsPage = () => {
   const [issue, setIssue] = useState(null);
   const [history, setHistory] = useState([]);
   const [comments, setComments] = useState([]);
-  const [assignment, setAssignment] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
@@ -68,7 +64,7 @@ const IssueDetailsPage = () => {
   const [assignmentNotes, setAssignmentNotes] = useState('');
   const [selectedPriority, setSelectedPriority] = useState('');
 
-  const fetchIssueDetails = async () => {
+  const fetchIssueDetails = useCallback(async () => {
     try {
       setLoading(true);
       const res = await api.get(`/issues/${id}`);
@@ -76,7 +72,6 @@ const IssueDetailsPage = () => {
         setIssue(res.data.issue);
         setHistory(res.data.history || []);
         setComments(res.data.comments || []);
-        setAssignment(res.data.assignment || null);
         setSelectedPriority(res.data.issue.priority);
       }
     } catch (err) {
@@ -84,11 +79,11 @@ const IssueDetailsPage = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
 
   useEffect(() => {
     fetchIssueDetails();
-  }, [id]);
+  }, [fetchIssueDetails]);
 
   // Load staff list for admin assignment modal
   useEffect(() => {
@@ -312,11 +307,6 @@ const IssueDetailsPage = () => {
     issue.slaDeadline &&
     new Date(issue.slaDeadline) < new Date() &&
     !['RESOLVED', 'REJECTED', 'CANCELLED'].includes(issue.status);
-
-  // Filter before and after photos
-  const beforeImages = issue.images?.filter((img) => img.type === 'BEFORE') || [];
-  const progressImages = issue.images?.filter((img) => img.type === 'PROGRESS') || [];
-  const afterImages = issue.images?.filter((img) => img.type === 'AFTER') || [];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">

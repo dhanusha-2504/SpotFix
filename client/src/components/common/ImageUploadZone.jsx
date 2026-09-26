@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { UploadCloud, Image as ImageIcon, X, Loader2, Check } from 'lucide-react';
+import { UploadCloud, X, Loader2 } from 'lucide-react';
 import api from '../../services/api';
 
 const ImageUploadZone = ({

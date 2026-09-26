@@ -1,13 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 @import 'leaflet/dist/leaflet.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.06), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  --accent-emerald: #059669;
+}
+
+html.dark {
+  --bg-primary: #030712;
+  --bg-secondary: #0b1120;
+  --bg-surface: rgba(15, 23, 42, 0.75);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(15, 23, 42, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.6), 0 0 20px -5px rgba(16, 185, 129, 0.15);
+  --accent-emerald: #10b981;
+}
+
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-emerald-500 selection:text-white;
+    @apply font-sans antialiased min-h-screen selection:bg-emerald-500 selection:text-white transition-colors duration-500;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
   }
 }
 
@@ -18,89 +48,119 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #090d16;
+  background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+html.dark ::-webkit-scrollbar-thumb {
   background: #1e293b;
   border-radius: 9999px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+html.dark ::-webkit-scrollbar-thumb:hover {
   background: #334155;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
 /* Glassmorphism helpers */
 .glass-panel {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .glass-card {
-  background: rgba(30, 41, 59, 0.5);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  background: rgba(30, 41, 59, 0.75);
-  border-color: rgba(16, 185, 129, 0.3);
+  border-color: rgba(16, 185, 129, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 14px 35px -8px rgba(16, 185, 129, 0.15);
+}
+
+/* Smart City HUD Overlay Panel */
+.digital-twin-hud {
+  background: rgba(11, 17, 32, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.1), inset 0 0 15px rgba(16, 185, 129, 0.05);
+}
+
+html.light .digital-twin-hud {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(5, 150, 105, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), inset 0 0 15px rgba(5, 150, 105, 0.03);
 }
 
 /* Status Badges */
 .badge-reported {
-  @apply bg-blue-500/10 text-blue-400 border border-blue-500/20;
+  @apply bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/30;
 }
 .badge-under_review {
-  @apply bg-indigo-500/10 text-indigo-400 border border-indigo-500/20;
+  @apply bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30;
 }
 .badge-approved {
-  @apply bg-teal-500/10 text-teal-400 border border-teal-500/20;
+  @apply bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/30;
 }
 .badge-assigned {
-  @apply bg-cyan-500/10 text-cyan-400 border border-cyan-500/20;
+  @apply bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30;
 }
 .badge-accepted {
-  @apply bg-sky-500/10 text-sky-400 border border-sky-500/20;
+  @apply bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/30;
 }
 .badge-in_progress {
-  @apply bg-amber-500/10 text-amber-400 border border-amber-500/20 animate-pulse;
+  @apply bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/30 animate-pulse;
 }
 .badge-completed {
-  @apply bg-emerald-500/10 text-emerald-400 border border-emerald-500/20;
+  @apply bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30;
 }
 .badge-verification_pending {
-  @apply bg-purple-500/10 text-purple-400 border border-purple-500/20;
+  @apply bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30;
 }
 .badge-resolved {
-  @apply bg-emerald-500/20 text-emerald-300 border border-emerald-500/30;
+  @apply bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border border-emerald-500/40;
 }
 .badge-reopened {
-  @apply bg-rose-500/15 text-rose-400 border border-rose-500/30;
+  @apply bg-rose-500/15 text-rose-600 dark:text-rose-400 border border-rose-500/40;
 }
 .badge-rejected {
-  @apply bg-red-500/10 text-red-400 border border-red-500/20;
+  @apply bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/30;
 }
 .badge-cancelled {
-  @apply bg-slate-500/10 text-slate-400 border border-slate-500/20;
+  @apply bg-slate-500/10 text-slate-600 dark:text-slate-400 border border-slate-500/30;
 }
 
 /* Priority Badges */
 .prio-critical {
-  @apply bg-red-500/15 text-red-400 border border-red-500/30 font-semibold;
+  @apply bg-red-500/15 text-red-600 dark:text-red-400 border border-red-500/40 font-semibold;
 }
 .prio-high {
-  @apply bg-amber-500/15 text-amber-400 border border-amber-500/30 font-semibold;
+  @apply bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/40 font-semibold;
 }
 .prio-medium {
-  @apply bg-blue-500/15 text-blue-400 border border-blue-500/30;
+  @apply bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/40;
 }
 .prio-low {
-  @apply bg-emerald-500/15 text-emerald-400 border border-emerald-500/30;
+  @apply bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/40;
 }
 
 /* Leaflet map container fix */
@@ -109,4 +169,39 @@
   height: 100%;
   border-radius: 0.75rem;
   z-index: 10;
+}
+
+/* 3D Marker Pulse Animations */
+@keyframes markerPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+}
+
+@keyframes radarWave {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.animate-marker-pulse {
+  animation: markerPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-radar-wave {
+  animation: radarWave 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
