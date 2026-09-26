@@ -18,15 +18,6 @@ import { useAuth } from '../context/AuthContext';
 import SpotFixCityExperience from '../components/canvas/SpotFixCityExperience';
 import api from '../services/api';
 
-const SCENES_META = [
-  { id: 'scene-city', label: '01 City', title: 'Smart Infrastructure' },
-  { id: 'scene-problem', label: '02 Problem', title: 'The Civic Challenge' },
-  { id: 'scene-report', label: '03 Report', title: 'Instant AI Reporting' },
-  { id: 'scene-track', label: '04 Track', title: 'Transparent Tracking' },
-  { id: 'scene-fix', label: '05 Fix', title: 'Verified Resolution' },
-  { id: 'scene-smart-city', label: '06 Vision', title: 'Smart City Together' },
-];
-
 const LandingPage = () => {
   const { isAuthenticated, role, login } = useAuth();
   const navigate = useNavigate();
@@ -107,42 +98,7 @@ const LandingPage = () => {
       <div className="fixed inset-0 pointer-events-none z-[1] bg-radial-gradient from-transparent via-transparent to-[var(--bg-primary)]/50" />
 
       {/* ========================================================================= */}
-      {/* 2. FLOATING SIDE SCENE NAVIGATION HUD (KAGE-INSPIRED)                     */}
-      {/* ========================================================================= */}
-      <aside className="fixed right-6 top-1/2 -translate-y-1/2 z-30 hidden lg:flex flex-col gap-3.5 p-3 rounded-2xl glass-panel shadow-2xl backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80">
-        <div className="text-[9px] uppercase tracking-widest font-mono text-slate-600 dark:text-slate-300 px-2 py-0.5 border-b border-slate-200 dark:border-slate-800">
-          City Story
-        </div>
-        {SCENES_META.map((scene, idx) => {
-          const isActive = activeSceneIndex === idx;
-          return (
-            <button
-              key={scene.id}
-              onClick={() => scrollToScene(idx)}
-              className={`group flex items-center justify-between gap-3 px-3 py-2 rounded-xl text-xs font-mono transition-all text-left ${
-                isActive
-                  ? 'bg-sky-500/15 text-sky-600 dark:text-sky-400 border border-sky-500/30 shadow-sm'
-                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/50'
-              }`}
-            >
-              <span className="font-bold">{scene.label}</span>
-              <span className="text-[10px] text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white hidden xl:inline transition-colors">
-                {scene.title}
-              </span>
-              <span
-                className={`w-2 h-2 rounded-full transition-all ${
-                  isActive
-                    ? 'bg-sky-500 ring-4 ring-sky-500/20 scale-110'
-                    : 'bg-slate-400 dark:bg-slate-600 group-hover:bg-slate-500'
-                }`}
-              />
-            </button>
-          );
-        })}
-      </aside>
-
-      {/* ========================================================================= */}
-      {/* 3. SCROLL-DRIVEN 6 NARRATIVE STORYTELLING SECTIONS                        */}
+      {/* 2. SCROLL-DRIVEN 6 NARRATIVE STORYTELLING SECTIONS                        */}
       {/* ========================================================================= */}
       <div className="relative z-10">
         {/* ----------------------------------------------------------------------- */}
