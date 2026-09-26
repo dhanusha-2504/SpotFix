@@ -8,17 +8,15 @@ import {
   UserCheck,
   AlertCircle,
   ArrowRight,
-  Sparkles,
-  CheckCircle2,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { SpotFixLogo } from '../../components/common/SpotFixLogo';
 
 /**
- * Modernized Register / Create Account Page
+ * Modernized Register / Create Account Page (Light Blue Theme)
  * - Clean, rounded premium authentication card with soft shadows
  * - Form fields: Full Name, E-mail, Password, Confirm Password, Phone (optional), Role selector
- * - Rounded gradient action button with smooth hover & press states
+ * - Light Blue rounded gradient action button with smooth hover & press states
  * - Visual social authentication row & smooth redirect to /login
  * - Full light & dark theme compatibility
  * - Preserves existing API registration and state handling
@@ -92,8 +90,8 @@ const RegisterPage = () => {
 
   return (
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-10 px-4 sm:px-6 lg:px-8 relative transition-colors duration-500">
-      {/* Soft Ambient Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-emerald-500/10 via-teal-500/10 to-sky-500/10 blur-[120px] rounded-full pointer-events-none -z-0" />
+      {/* Soft Ambient Light Blue Background Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-sky-400/15 via-blue-400/10 to-indigo-400/10 blur-[120px] rounded-full pointer-events-none -z-0" />
 
       {/* Main Authentication Card */}
       <div className="max-w-md w-full glass-panel p-6 sm:p-8 rounded-3xl border border-slate-200/90 dark:border-slate-800/90 shadow-2xl space-y-6 relative z-10 transition-all duration-300">
@@ -127,7 +125,7 @@ const RegisterPage = () => {
               Full Name
             </label>
             <div className="relative group">
-              <User className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-emerald-500" />
+              <User className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-sky-500" />
               <input
                 type="text"
                 name="name"
@@ -135,7 +133,7 @@ const RegisterPage = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Full Name"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm shadow-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm shadow-sm focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all"
               />
             </div>
           </div>
@@ -146,7 +144,7 @@ const RegisterPage = () => {
               E-mail
             </label>
             <div className="relative group">
-              <Mail className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-emerald-500" />
+              <Mail className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-sky-500" />
               <input
                 type="email"
                 name="email"
@@ -154,7 +152,7 @@ const RegisterPage = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="E-mail"
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm shadow-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm shadow-sm focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all"
               />
             </div>
           </div>
@@ -166,7 +164,7 @@ const RegisterPage = () => {
                 Password
               </label>
               <div className="relative group">
-                <Lock className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-emerald-500" />
+                <Lock className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-sky-500" />
                 <input
                   type="password"
                   name="password"
@@ -174,7 +172,7 @@ const RegisterPage = () => {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="Password"
-                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm shadow-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all"
+                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm shadow-sm focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all"
                 />
               </div>
             </div>
@@ -184,7 +182,7 @@ const RegisterPage = () => {
                 Confirm Password
               </label>
               <div className="relative group">
-                <Lock className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-emerald-500" />
+                <Lock className="w-4 h-4 text-slate-400 dark:text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 transition-colors group-focus-within:text-sky-500" />
                 <input
                   type="password"
                   name="confirmPassword"
@@ -192,7 +190,7 @@ const RegisterPage = () => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   placeholder="Confirm Password"
-                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm shadow-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all"
+                  className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm shadow-sm focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 transition-all"
                 />
               </div>
             </div>
@@ -209,7 +207,7 @@ const RegisterPage = () => {
                 onClick={() => setFormData({ ...formData, role: 'user' })}
                 className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
                   formData.role === 'user'
-                    ? 'bg-emerald-500/15 border-emerald-500 text-emerald-700 dark:text-emerald-400 shadow-sm'
+                    ? 'bg-sky-500/15 border-sky-500 text-sky-600 dark:text-sky-400 shadow-sm'
                     : 'bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
@@ -221,7 +219,7 @@ const RegisterPage = () => {
                 onClick={() => setFormData({ ...formData, role: 'staff' })}
                 className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
                   formData.role === 'staff'
-                    ? 'bg-sky-500/15 border-sky-500 text-sky-700 dark:text-sky-400 shadow-sm'
+                    ? 'bg-sky-500/15 border-sky-500 text-sky-600 dark:text-sky-400 shadow-sm'
                     : 'bg-slate-100 dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
@@ -241,7 +239,7 @@ const RegisterPage = () => {
                 name="department"
                 value={formData.department}
                 onChange={handleChange}
-                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20"
+                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20"
               >
                 <option value="Electrical & Lighting">Electrical & Lighting</option>
                 <option value="Roads & Infrastructure">Roads & Infrastructure</option>
@@ -252,11 +250,11 @@ const RegisterPage = () => {
             </div>
           )}
 
-          {/* Register Action Button with Gradient & Scale Effects */}
+          {/* Register Action Button with Light Blue Gradient & Scale Effects */}
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-600 hover:from-emerald-500 hover:via-teal-400 hover:to-emerald-500 active:scale-[0.98] text-white font-bold text-sm shadow-xl shadow-emerald-900/25 transition-all duration-200 hover:scale-[1.01] flex items-center justify-center gap-2 disabled:opacity-50 mt-3 cursor-pointer"
+            className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-sky-500 via-blue-500 to-sky-600 hover:from-sky-400 hover:via-blue-400 hover:to-sky-500 active:scale-[0.98] text-white font-bold text-sm shadow-xl shadow-sky-900/25 transition-all duration-200 hover:scale-[1.01] flex items-center justify-center gap-2 disabled:opacity-50 mt-3 cursor-pointer"
           >
             {loading ? (
               <span className="flex items-center gap-2">
@@ -340,7 +338,7 @@ const RegisterPage = () => {
           Already have an account?{' '}
           <Link
             to="/login"
-            className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 font-bold hover:underline transition-colors"
+            className="text-sky-600 dark:text-sky-400 hover:text-sky-500 font-bold hover:underline transition-colors"
           >
             Sign In
           </Link>
