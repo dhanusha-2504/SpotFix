@@ -13,12 +13,11 @@ import {
   CheckSquare,
   Menu,
   X,
-  Sun,
-  Moon,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useTheme } from '../../context/ThemeContext';
 import { SpotFixLogo } from './SpotFixLogo';
+import { ThemeToggle } from './ThemeToggle';
 import api from '../../services/api';
 
 const Navbar = () => {
@@ -234,25 +233,9 @@ const Navbar = () => {
           </div>
 
           {/* Right Header Actions */}
-          <div className="flex items-center gap-2.5">
-            {/* Global Day / Night Theme Switcher */}
-            <button
-              onClick={toggleTheme}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-200/80 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-800 transition-all shadow-sm"
-              title={`Switch to ${isDark ? 'Day (Light)' : 'Night (Dark)'} Theme`}
-            >
-              {isDark ? (
-                <>
-                  <Moon className="w-4 h-4 text-cyan-400 animate-spin-slow" />
-                  <span className="text-xs font-semibold hidden sm:inline">Night</span>
-                </>
-              ) : (
-                <>
-                  <Sun className="w-4 h-4 text-amber-500 animate-spin-slow" />
-                  <span className="text-xs font-semibold hidden sm:inline">Day</span>
-                </>
-              )}
-            </button>
+          <div className="flex items-center gap-3">
+            {/* Animated AM / PM Sun–Moon Theme Toggle */}
+            <ThemeToggle />
 
             {!isAuthenticated ? (
               <div className="flex items-center gap-2">
